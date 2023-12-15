@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  db:
+    image: mysql:8.0
+    ports:
+      - "3306:3306" 
+    environment:
+      MYSQL_DATABASE: pubplus
+      MYSQL_ROOT_PASSWORD: root
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      target: backend
+    ports:
+      - "5000:5000"
+    depends_on:
+      - db 
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      target: frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend

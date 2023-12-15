@@ -1,0 +1,288 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 h2 {
+  font-family: cursive;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Define color variables */
+:root {
+  --pub-blue-color: #41c5f5; 
+  --pub-yellow-color: #f8d025;
+  --pub-dark-color: #4a4a4a;
+}
+
+div::-webkit-scrollbar {
+  width: 15px;
+}
+
+div::-webkit-scrollbar-thumb {
+  background-color: var(--pub-dark-color);
+  border-radius: 10px;
+  width: 10%;
+}
+
+/* Base Layout Styles */
+.base-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh;
+  margin: 10px;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.disable-card {
+  background-color: #f6f6f6 !important;
+}
+
+.card{
+  background-color: rgb(255, 255, 255);
+  color: rgba(0, 0, 0, 0.87);
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  border-radius: 4px;
+  max-width: inherit;
+  border: 0.5px solid rgb(0 0 0/8%);
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  /* gap: 5px; */
+}
+.card .card-header {
+  display: flex;
+  justify-content: space-between;
+}
+.card-header .title {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.card .card-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+.card .card-footer {
+  display: flex;
+  justify-content: right
+}
+
+.cards-wrapper {
+  width: 820px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  box-shadow: 0 1px 8px 0 rgb(0 0 0/8%);
+  max-height: 80vh;
+  min-height: 40vh;
+  overflow-y: auto;
+}
+
+.dark-mode * {
+  background: #0d4874 !important;
+  color: var(--pub-yellow-color) !important;
+}
+
+.dark-mode .card {
+  border: 1px solid var(--pub-yellow-color) !important;
+}
+
+.cards-wrapper .cards-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+} 
+
+.cards-header div {
+  display: flex;
+  gap: 5px;
+}
+.user-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.button-ui {
+  border-radius: 5px;
+  border: 1px solid var(--pub-yellow-color);
+  padding: 5px;
+  background: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--pub-yellow-color);
+}
+
+.auto-container{
+  display: flex;
+  justify-content: left;
+}
+.auto-container .input-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* gap: 5px; */
+}
+.auto-container input {
+  width: 10rem;
+  height: 2rem;
+  border-width: thin;
+  border-radius: 5px;
+  border: 1px solid var(--pub-yellow-color);
+  color: var(--pub-blue-color);
+}
+
+.auto-container select {
+  width: 10rem;
+  height: 2rem;
+  border-width: thin;
+  border-radius: 5px;
+  border: 1px solid var(--pub-yellow-color);
+  color: var(--pub-blue-color);
+}
+
+.main-container {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 90%;
+  color: #4E6075 !important;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.login-container {
+  flex-direction: row;
+  justify-content: center;
+  color: white !important;
+  place-items: center;
+  min-height: 95vh;
+}
+
+.login-container .wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background: #318ae6;
+  border-radius: 10px;
+}
+
+div::-webkit-scrollbar {
+width: 15px;
+}
+
+div::-webkit-scrollbar-thumb {
+background-color: var(--pub-yellow-color);
+border-radius: 10px;
+width: 10%;
+}
+
+div::-webkit-scrollbar-thumb:hover {
+  background-color: #bccfdd;
+}
+
+.sidebar-space{
+  margin-left: 225px;
+  } 
+
+.header{
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding: 5px;
+  background: #318ae6;
+  justify-content: space-between;
+}
+
+.header small {
+  color: var(--pub-yellow-color);
+}
+
+.active-tab{
+  border: 1.3px solid #124380;
+  border-radius: 0 45px 45px 0;
+  width: 80%;
+  background: #eeeeee63;
+}
+
+.multiselect-container {
+  position: relative;
+  display: inline-block;
+}
+
+.multiselect-input {
+  padding: 6px;
+  background: var(--pub-yellow-color);
+  color: #141414;
+  cursor: pointer;
+  min-width: 135px;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 9px;
+  border: 1px solid #f47c24;
+  font-weight: 600;
+}
+
+.multiselect-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 4;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  max-height: 150px;
+  overflow-y: auto;
+}
+
+.multiselect-list label {
+  display: block;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.multiselect-list label:hover {
+  background-color: #f5f5f5;
+}
+
+.filter-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-direction: row;
+}
+
+.filter-border-row{
+  border-bottom: 1px solid #d1f3ff;
+  padding-bottom: 5px;
+}
+
+.login-img {
+  margin: 0px auto;
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+.header-logo{
+  width: 50px;
+}
